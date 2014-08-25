@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    host_config: grunt.file.readJSON('.host_config'),
     compass: {
       dist: {
         options: {
@@ -58,7 +57,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      files: ['js/lightbox.js']
+      files: ['js/lightbox.js', 'js/exif-lightbox.js']
     },
     uglify: {
       options: {
@@ -67,7 +66,9 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'js/lightbox.min.js': ['js/lightbox.js']
+          'js/lightbox.min.js': ['js/lightbox.js'],
+          'js/exif-lightbox.min.js': ['js/exif-lightbox.js'],
+          'js/load-image.min.js': ['js/load-image.js']
         }
       }
     },   
